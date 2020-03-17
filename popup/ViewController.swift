@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBAction func showPopUp(_ sender: Any) {
         
         let popupVC: PopUpViewController = UIStoryboard(name: "Popup", bundle: nil).instantiateViewController(identifier: "PopupViewController") as! PopUpViewController
+        
+        popupVC.modalPresentationStyle = .overCurrentContext //overlay, 즉 현재 viewController 위에다 띄어준다는 말임.
+        
         self.present(popupVC, animated: false, completion: nil)
         
         

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,27 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bce-KQ-fNU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmo-nn-3OE">
                                 <rect key="frame" x="40" y="224" width="334" height="448"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPM-fU-nu4">
-                                        <rect key="frame" x="20" y="398" width="68.5" height="30"/>
+                                        <rect key="frame" x="20" y="398" width="68.666666666666671" height="30"/>
                                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="닫기"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="vy7-kD-HQ1" eventType="touchUpInside" id="X3L-rz-rCA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-SM-B6Y">
-                                        <rect key="frame" x="108.5" y="398" width="205.5" height="30"/>
+                                        <rect key="frame" x="108.66666666666664" y="398" width="205.33333333333337" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="자세히 보기"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup.png" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-50-me7">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="378"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="378" id="kR6-9K-ThU"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-wd-zfy">
                                         <rect key="frame" x="296" y="8" width="30" height="30"/>
                                         <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="vy7-kD-HQ1" eventType="touchUpInside" id="GET-fb-fTj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,12 +72,20 @@
                         <constraints>
                             <constraint firstItem="qmo-nn-3OE" firstAttribute="top" secondItem="3yu-Pj-Ouy" secondAttribute="top" constant="180" id="3bs-Jw-s9p"/>
                             <constraint firstItem="3yu-Pj-Ouy" firstAttribute="trailing" secondItem="qmo-nn-3OE" secondAttribute="trailing" constant="40" id="5g1-1T-Oo8"/>
+                            <constraint firstItem="Bce-KQ-fNU" firstAttribute="top" secondItem="3yu-Pj-Ouy" secondAttribute="top" id="6fb-mP-vhX"/>
+                            <constraint firstItem="Bce-KQ-fNU" firstAttribute="leading" secondItem="3yu-Pj-Ouy" secondAttribute="leading" id="KLd-HT-TDe"/>
+                            <constraint firstItem="Bce-KQ-fNU" firstAttribute="trailing" secondItem="3yu-Pj-Ouy" secondAttribute="trailing" id="MOy-ov-2bB"/>
                             <constraint firstItem="qmo-nn-3OE" firstAttribute="centerY" secondItem="PKs-W6-O15" secondAttribute="centerY" id="Mcz-1s-uet"/>
                             <constraint firstItem="qmo-nn-3OE" firstAttribute="centerX" secondItem="PKs-W6-O15" secondAttribute="centerX" id="Xqe-jx-RYO"/>
+                            <constraint firstItem="Bce-KQ-fNU" firstAttribute="bottom" secondItem="3yu-Pj-Ouy" secondAttribute="bottom" id="iC1-uQ-0fq"/>
                             <constraint firstItem="qmo-nn-3OE" firstAttribute="leading" secondItem="3yu-Pj-Ouy" secondAttribute="leading" constant="40" id="trk-ak-JQi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3yu-Pj-Ouy"/>
                     </view>
+                    <connections>
+                        <outlet property="popupImage" destination="4zK-50-me7" id="wC9-Oz-dJH"/>
+                        <outlet property="popupImageHeight" destination="kR6-9K-ThU" id="QYp-P0-eLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9q-ID-Fy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
