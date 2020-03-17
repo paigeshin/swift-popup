@@ -70,7 +70,6 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="qmo-nn-3OE" firstAttribute="top" secondItem="3yu-Pj-Ouy" secondAttribute="top" constant="180" id="3bs-Jw-s9p"/>
                             <constraint firstItem="3yu-Pj-Ouy" firstAttribute="trailing" secondItem="qmo-nn-3OE" secondAttribute="trailing" constant="40" id="5g1-1T-Oo8"/>
                             <constraint firstItem="Bce-KQ-fNU" firstAttribute="top" secondItem="3yu-Pj-Ouy" secondAttribute="top" id="6fb-mP-vhX"/>
                             <constraint firstItem="Bce-KQ-fNU" firstAttribute="leading" secondItem="3yu-Pj-Ouy" secondAttribute="leading" id="KLd-HT-TDe"/>
@@ -83,6 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="3yu-Pj-Ouy"/>
                     </view>
                     <connections>
+                        <outlet property="popupCenterY" destination="Mcz-1s-uet" id="L7Z-iY-qeC"/>
                         <outlet property="popupImage" destination="4zK-50-me7" id="wC9-Oz-dJH"/>
                         <outlet property="popupImageHeight" destination="kR6-9K-ThU" id="QYp-P0-eLA"/>
                     </connections>

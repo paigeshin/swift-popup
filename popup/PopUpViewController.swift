@@ -13,9 +13,12 @@ class PopUpViewController: UIViewController {
     
     @IBOutlet weak var popupImage: UIImageView!
     @IBOutlet weak var popupImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var popupCenterY: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        popupCenterY.constant = 1000
         
     }
     
@@ -23,6 +26,11 @@ class PopUpViewController: UIViewController {
         super.viewDidAppear(animated)
         //view를 동적으로 control 하고 싶을 때, 무조건 viewDidAppear에다가 값을 넣어야지 제대로 된 결과를 얻을 수 있다.
         //        setDialogView()
+        
+        popupCenterY.constant = 0
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
         
     }
     
